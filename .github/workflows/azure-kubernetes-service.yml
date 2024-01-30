@@ -92,10 +92,9 @@ jobs:
       # Deploys application based on given manifest file
       - name: Deploys application
         uses: Azure/k8s-deploy@v4
-        working-directory: ./dotnet-feature-flags
         with:
           action: deploy
-          manifests: ${{ env.DEPLOYMENT_MANIFEST_PATH }}
+          manifests: './dotnet-feature-flags/${{ env.DEPLOYMENT_MANIFEST_PATH }}'
           images: |
             ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.CONTAINER_NAME }}:${{ github.sha }}
           pull-images: false
