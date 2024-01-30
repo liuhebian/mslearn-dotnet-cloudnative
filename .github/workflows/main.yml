@@ -11,8 +11,8 @@ env:
   CONTAINER_NAME: 'productservice'
   RESOURCE_GROUP: 'rg-eShopLite'
   CLUSTER_NAME: 'eShopLite'
-  DEPLOYMENT_MANIFEST_PATH: './product.yml'
-  DOCKER_PATH: './DockerfileProducts'
+  DEPLOYMENT_MANIFEST_PATH: './dotnet-feature-flags/product.yml'
+  DOCKER_PATH: './dotnet-feature-flags/DockerfileProducts'
 
 jobs:
   buildImage:
